@@ -1,0 +1,56 @@
+# Name of your workflow, visible in the GitHub Actions tab
+name: Deploy MkDocs Documentation
+
+# Controls when the workflow will run
+on:
+  # Trigger the workflow on pushes to the 'deploy' branch
+  push:
+    branches:
+      - deploy # You can change this to 'main' or 'master' if that's your primary documentation branch
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Defines the jobs that will run in this workflow
+jobs:
+  deploy:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Permissions required for the workflow to deploy to GitHub Pages
+    permissions:
+      contents: write # Required to push to the gh-pages branch
+      pages: write    # Required to enable/configure GitHub Pages
+      id-token: write # Required for OIDC authentication by GitHub Pages (best practice)
+
+    # Steps in the job
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          # Fetch all history for all branches and tags.
+          # This is important for MkDocs' gh-deploy command, especially for handling the gh-pages branch.
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x' # Use the latest Python 3 version
+
+      - name: Install MkDocs and Material theme dependencies
+        run: |
+          # Install the base MkDocs Material theme
+          pip install mkdocs-material
+
+          # If you use specific plugins or extensions that need to be installed,
+          # add them here. For your current mkdocs.yml, only mkdocs-material
+          # and possibly mermaid2 (which is often included or installed with mkdocs-material)
+          # should be sufficient.
+          # If 'mermaid2' is not automatically handled, you might need:
+          # pip install mkdocs-mermaid2
+
+      - name: Deploy MkDocs to GitHub Pages
+        run: mkdocs gh-deploy --force --clean --config-file mkdocs.yml
+        env:
+          # Use the GITHUB_TOKEN for authentication with GitHub
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
