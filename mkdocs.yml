@@ -60,10 +60,10 @@ markdown_extensions:
 
 plugins:
   - search
-  - mermaid2:
-      arguments:
-        theme: |
-          ^(JSON.parse(__md_get("__palette").index == 1)) ? 'dark' : 'light'
+  #- mermaid2:
+  #    arguments:
+  #      theme: |
+  #        ^(JSON.parse(__md_get("__palette").index == 1)) ? 'dark' : 'light'
 
 extra_javascript:
   - javascripts/mathjax.js
