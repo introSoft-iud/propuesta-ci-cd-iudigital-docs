@@ -20,7 +20,7 @@ Durante esta fase, se llevaron a cabo las siguientes tareas:
     * *Detalles:* Se diseñaron guiones de entrevista específicos para cada rol, enfocándose en sus responsabilidades diarias, herramientas utilizadas, desafíos, y cómo perciben el flujo de trabajo actual.
 
     #### Entrevista con Camilo 
-    En una primera instancia camilo nos plantea el flujo de trabajo y mentodologóas usadas y docuimentadas por el equipo de producción. .... La sesión se gravó y puede ser descagada en (link)
+    En una primera instancia camilo nos plantea el flujo de trabajo y mentodologóas usadas y docuimentadas por el equipo de producción. .... La sesión se gravó y puede ser descagada en (link) así mismo la docuemtación usada por el quipo de prodicción se pude consultar en (link)
 
 
 
