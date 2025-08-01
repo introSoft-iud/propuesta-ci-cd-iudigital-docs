@@ -47,7 +47,8 @@ jobs:
           # and possibly mermaid2 (which is often included or installed with mkdocs-material)
           # should be sufficient.
           # If 'mermaid2' is not automatically handled, you might need:
-          # pip install mkdocs-mermaid2
+          pip install mkdocs-mermaid2
+          
 
       - name: Deploy MkDocs to GitHub Pages
         run: mkdocs gh-deploy --force --clean --config-file mkdocs.yml
