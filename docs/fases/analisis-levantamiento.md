@@ -18,6 +18,12 @@ Durante esta fase, se llevaron a cabo las siguientes tareas:
     * Personal de Soporte Técnico y Mantenimiento: [Nombres o roles]
     * Administradores de la Plataforma LMS: [Nombres o roles]
     * *Detalles:* Se diseñaron guiones de entrevista específicos para cada rol, enfocándose en sus responsabilidades diarias, herramientas utilizadas, desafíos, y cómo perciben el flujo de trabajo actual.
+
+    #### Entrevista con Camilo 
+    En una primera instancia camilo nos plantea el flujo de trabajo y mentodologóas usadas y docuimentadas por el equipo de producción. ....
+
+
+
 * **Revisión de Documentación Existente:**
     * [Lista de documentos revisados: manuales de proceso, guías de estilo, procedimientos operativos estándar, etc.]
     * *Detalles:* Se analizaron estos documentos para entender las normativas y los procesos formalmente establecidos, comparándolos con la realidad percibida en las entrevistas.
