@@ -2,7 +2,7 @@ site_name: Propuesta de CI/CD Pipeline para la IUDigital de Antioquia
 site_description: Documentación y avance del proyecto de investigación sobre la propuesta de un CI/CD Pipeline para la producción, mantenimiento y despliegue de cursos en la IUDigital de Antioquia.
 site_author: Juan Camilo Macias, Boris Salleg
 
-#site_url: 
+#site_url:
 
 theme:
   name: material
@@ -47,7 +47,7 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:mermaid2.fence_mermaid_custom
+          # --- REMOVE THIS LINE: format: !!python/name:mermaid2.fence_mermaid_custom ---
   - pymdownx.tabbed:
       alternate_style: true
   - admonition
@@ -60,11 +60,13 @@ markdown_extensions:
 
 plugins:
   - search
-  
+  # (No mermaid2 plugin here, which is correct)
+
 extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/mermaid/dist/mermaid.min.js # <--- ADD THIS LINE FOR MERMAID.JS
 
 extra_css:
   - css/custom.css
